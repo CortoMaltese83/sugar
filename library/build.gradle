@@ -25,6 +25,7 @@ android {
 dependencies {
     testCompile 'junit:junit:4.12'
     testCompile 'org.robolectric:robolectric:3.0'
+    compile files('libs/sqlcipher.jar')
 }
 
 task libraryJar(type: Jar) {

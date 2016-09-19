@@ -8,6 +8,7 @@ android {
         applicationId "com.example"
         minSdkVersion 9
         targetSdkVersion 23
+
     }
     buildTypes {
         release {
@@ -20,6 +21,6 @@ android {
 }
 
 dependencies {
-    compile project (':library')
+    compile project(':library')
     compile 'com.android.support:appcompat-v7:23.3.0'
 }
