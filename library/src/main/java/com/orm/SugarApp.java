@@ -22,12 +22,6 @@ public class SugarApp extends Application {
 
     private void InitializeSQLCipher() {
         SQLiteDatabase.loadLibs(this);
-/*        File databaseFile = getDatabasePath("demo.db");
-        databaseFile.mkdirs();
-        databaseFile.delete();
-        SQLiteDatabase database = SQLiteDatabase.openOrCreateDatabase(databaseFile, "test123", null);
-        database.execSQL("create table t1(a, b)");
-        database.execSQL("insert into t1(a, b) values(?, ?)", new Object[]{"one for the money", "two for the show"});*/
     }
 
 }

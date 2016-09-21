@@ -25,11 +25,12 @@ android {
 dependencies {
     testCompile 'junit:junit:4.12'
     testCompile 'org.robolectric:robolectric:3.0'
+    compile fileTree(include: '*.jar', dir: 'libs')
     compile files('libs/sqlcipher.jar')
 }
 
 task libraryJar(type: Jar) {
-    dependsOn assembleRelease
+    dependsOn 'assembleRelease'
     from android.sourceSets.main.java.srcDirs,
          ['build/intermediates/classes/release/'] // Add the release classes into the jar
     baseName 'sugar'

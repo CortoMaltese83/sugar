@@ -1,7 +1,8 @@
 package com.orm;
 
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+
+
 
 import com.orm.app.ClientApp;
 import com.orm.dsl.BuildConfig;
@@ -16,6 +17,8 @@ import com.orm.helper.NamingHelper;
 import com.orm.model.TestRecord;
 
 import junit.framework.Assert;
+
+import net.sqlcipher.database.SQLiteDatabase;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
