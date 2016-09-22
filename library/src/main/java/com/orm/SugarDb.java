@@ -8,6 +8,7 @@ import com.orm.util.SugarCursorFactory;
 import net.sqlcipher.database.SQLiteDatabase;
 import net.sqlcipher.database.SQLiteOpenHelper;
 
+import static com.orm.helper.ManifestHelper.getDatabasePassword;
 import static com.orm.util.ContextUtil.getContext;
 import static com.orm.helper.ManifestHelper.getDatabaseVersion;
 import static com.orm.helper.ManifestHelper.getDbName;
@@ -55,7 +56,7 @@ public class SugarDb extends SQLiteOpenHelper {
 
     public synchronized SQLiteDatabase getDB() {
         if (this.sqLiteDatabase == null) {
-            this.sqLiteDatabase = getWritableDatabase("password");
+            this.sqLiteDatabase = getWritableDatabase(getDatabasePassword());
         }
 
         return this.sqLiteDatabase;
@@ -67,7 +68,7 @@ public class SugarDb extends SQLiteOpenHelper {
             Log.d(LOG_TAG, "getReadableDatabase");
         }
         openedConnections++;
-        return super.getReadableDatabase("password");
+        return super.getReadableDatabase(getDatabasePassword());
     }
 
     @Override

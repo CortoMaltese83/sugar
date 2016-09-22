@@ -18,6 +18,7 @@
         <meta-data android:name="VERSION" android:value="3" />
         <meta-data android:name="QUERY_LOG" android:value="true" />
         <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.example.persistence.entity" />
+        <meta-data android:name="PASSWORD" android:value="prova"/>
 
     </application>
 </manifest> 

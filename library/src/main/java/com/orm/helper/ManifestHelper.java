@@ -25,10 +25,20 @@ public final class ManifestHelper {
     public final static String METADATA_DOMAIN_PACKAGE_NAME = "DOMAIN_PACKAGE_NAME";
     public final static String METADATA_QUERY_LOG = "QUERY_LOG";
 
+
+    /**
+     * Key for the database passwrod meta data.
+     */
+    public final static String METADATA_PASSWORD = "PASSWORD";
     /**
      * The default name for the database unless specified in the AndroidManifest.
      */
     public final static String DATABASE_DEFAULT_NAME = "Sugar.db";
+
+    /**
+     * The default password for the database unless specified in the AndroidManifest.
+     * */
+    public final static String DATABASE_DEFAULT_PASSWORD = "password";
 
     //Prevent instantiation
     private ManifestHelper() { }
@@ -78,6 +88,22 @@ public final class ManifestHelper {
         }
 
         return databaseName;
+    }
+
+    /**
+     * Grabs the name of the database file specified in the manifest.
+     *
+     * @return the value for the {@value #METADATA_DATABASE} meta data in the AndroidManifest or
+     *         {@link #DATABASE_DEFAULT_NAME} if not present
+     */
+    public static String getDatabasePassword() {
+        String databasePassword = getMetaDataString(METADATA_DATABASE);
+
+        if (databasePassword == null) {
+            databasePassword = DATABASE_DEFAULT_PASSWORD;
+        }
+
+        return databasePassword;
     }
 
     public static String getDbName() {
