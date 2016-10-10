@@ -11,9 +11,7 @@ import com.example.utils.FileUtil;
 
 import java.util.List;
 
-
-public class SugarActivity extends SingleFragmentActivity
-{
+public class SugarActivity extends SingleFragmentActivity {
 
     private static final String TAG = SugarActivity.class.getSimpleName();
 
