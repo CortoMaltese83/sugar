@@ -3,7 +3,7 @@ package com.example.persistence.entity;
 import com.orm.SugarRecord;
 
 /**
- * Created by francesco.lombardi on 21/09/16.
+ * Example of Sugar Entity the only difference is that DB is Encrypted.
  */
 
 public class BookEntity extends SugarRecord {
